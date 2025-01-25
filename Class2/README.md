@@ -8,4 +8,6 @@
 将代码写好之后生成失败，报错信息如下：  
 FPS_ProjectGameMode.gen.cpp.obj : error LNK2019: 无法解析的外部符号 "__declspec(dllimport) class UClass * __cdecl Z_Construct_UClass_UUserWidget_NoRegister(void)" (__imp_?Z_Construct_UClass_UUserWidget_NoRegister@@YAPEAVUClass@@XZ)，函数 "void __cdecl dynamic initializer for 'public: static struct UECodeGen_Private::FObjectPropertyParams const Z_Construct_UClass_AFPS_ProjectGameMode_Statics::NewProp_TimerWidget''(void)" (??__E?NewProp_TimerWidget@Z_Construct_UClass_AFPS_ProjectGameMode_Statics@@2UFObjectPropertyParams@UECodeGen_Private@@B@@YAXXZ) 中引用了该符号  
 遂手动在.uproject 文件中添加了 UMG 模块，在 YourProject.Build.cs 文件中将 UMG 模块添加到项目的构建依赖  
-编译通过了，但是运行游戏之后ui widget并没有在游戏界面显示TT
+编译通过了，但是运行游戏之后ui widget并没有在游戏界面显示TT  
+2025.1.25  
+放弃了将时间更新加入到ui的需求，这几天一直在处理如何获取角色射击获得的Score的问题，奇怪的是每一次射中方块后都成功增加了Score，但是在GameMode中获取到的Character->Score依然是默认的0分。百思不得其解，遂先上传半成品source。
