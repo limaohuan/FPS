@@ -1,0 +1,3 @@
+一些问题：  
+有个特低级的错误，就是在播放npc蹲下休息的蒙太奇时，忘记在动画蓝图中添加slot，然后卡住……就这个bug卡了我一天才找到TT   
+然后就是行为树的selector和sequence，selector只会选择一次，不会重复执行，在selector前面添加sequence节点就可以实现次次执行selector
