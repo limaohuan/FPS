@@ -2,4 +2,5 @@
 有个特低级的错误，就是在播放npc蹲下休息的蒙太奇时，忘记在动画蓝图中添加slot，然后卡住……就这个bug卡了我一天才找到TT   
 然后就是行为树的selector和sequence，selector只会选择一次，不会重复执行，在selector前面添加sequence节点就可以实现次次执行selector  
 最后是看了文档才知道将decorator的Observer aborts设置为both就可以实现立刻终止当前不符合条件的任务而执行符合条件的任务  
+说明：
 忍者骨骼的character是继承敌人类，按路线巡逻，被击中两次后倒地；Medea骨骼的character继承npc类，按路线寻路，中途经过节点时会随机找位置蹲下休息，遇见主角会和主角打招呼
